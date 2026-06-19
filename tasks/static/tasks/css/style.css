@@ -1,0 +1,73 @@
+/* To Do App CSS */
+body { 
+    background-color:#000 ;
+    font-family: "Black Ops One", sans-serif;
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: #000;
+    border-bottom: 2px solid #d4af37;
+}
+.gold-text {
+    color: #d4af37 !important;
+}
+
+.navbar-brand {
+    font-family: "Black Ops One", cursive;
+    font-size: 1.5rem;
+}
+
+/* Main section */
+.main-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Card */
+.todo-card {
+    background-color: #d4af37;
+    color: #000;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.todo-card h1 {
+    font-family: "Black Ops One", cursive;
+
+}
+
+/* Form */
+
+.form-control {
+    border: 2px solid #000;
+}
+
+/* Task List */
+.list-group-item {
+    background-color: #f7e29c;
+    border: none;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.status {
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+/* Buttons */
+
+.btn-dark{
+    background-color: #000;
+    border-color: #000;
+}
+
+.btn-dark:hover {
+  background-color: #000;
+  border-top: 2px solid #d4af37;
+  padding: 15px;
+}
+
