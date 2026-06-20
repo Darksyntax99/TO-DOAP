@@ -4,8 +4,6 @@ from .models import Task
 
 
 # Display tasks and create new tasks
-
-
 @login_required
 def home(request):
 
@@ -27,8 +25,6 @@ def home(request):
 
 
 # Update task status
-
-
 @login_required
 def update_task(request, pk):
     task = get_object_or_404(Task, id=pk, user=request.user)
@@ -38,11 +34,8 @@ def update_task(request, pk):
 
 
 # Delete task
-
-
 @login_required
 def delete_task(request, pk):
     task = get_object_or_404(Task, id=pk, user=request.user)
     task.delete()
     return redirect('home')
-
