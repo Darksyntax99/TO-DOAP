@@ -1,10 +1,11 @@
-from django.shortcuts import redirect, render, get_object_or_404 
+from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from tasks.models import Task
+from .models import Task
 
-# Create your views here.
 
-# display tasks and create new tasks.
+# Display tasks and create new tasks
+
+
 @login_required
 def home(request):
 
@@ -23,7 +24,11 @@ def home(request):
         'tasks/home.html',
         {'tasks': tasks}
     )
-# update task status.
+
+
+# Update task status
+
+
 @login_required
 def update_task(request, pk):
     task = get_object_or_404(Task, id=pk, user=request.user)
@@ -31,9 +36,13 @@ def update_task(request, pk):
     task.save()
     return redirect('home')
 
-# delete task.
+
+# Delete task
+
+
 @login_required
 def delete_task(request, pk):
     task = get_object_or_404(Task, id=pk, user=request.user)
     task.delete()
     return redirect('home')
+
