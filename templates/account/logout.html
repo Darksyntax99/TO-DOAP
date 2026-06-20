@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+
+<div class="todo-card mx-auto">
+  <h1 class="text-center mb-4">Log Out</h1> 
+  <p class="text-center">
+    want you to logout? 
+  </p>
+<form method="POST" action="{% url 'account_logout'%}">
+    {% csrf_token %}
+    {% if redirect_field_value %}
+    <input type="hidden"
+    name="{{redirect_field_name}}"
+    value="{{redirect_field_value}}">
+    {% endif %}
+    <button class="btn btn-dark w-100" type="submit">Logout</button>
+</form>
+</div>
+{% endblock content %}
