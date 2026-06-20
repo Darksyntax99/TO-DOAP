@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block content %}
-
+<!-- Log Out Form -->
 <div class="todo-card mx-auto">
   <h1 class="text-center mb-4">Log Out</h1> 
   <p class="text-center">
@@ -16,6 +16,7 @@
     name="{{redirect_field_name}}"
     value="{{redirect_field_value}}">
     {% endif %}
+    <!-- Logout Button -->
     <button class="btn btn-dark w-100" type="submit">Logout</button>
 </form>
 </div>
